@@ -7,7 +7,7 @@
 		
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Wedding &mdash; 100% Free Fully Responsive HTML5 Template by qbootstrap.com</title>
+	<title>First Meet</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by QBOOTSTRAP.COM" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -67,7 +67,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body style="background-color:#191918 ;">
 
 	<div id="qbootstrap-couple" class="qbootstrap-section-gray">
 		<div class="container">
@@ -75,9 +75,9 @@
 				<div class="col-md-8 col-md-offset-2 animate-box">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<h2>Coming Soon</h2>
-						<p id="demo" style="font-size: 30px;"></p>
-						<hr>
-						<p>We are gonna meet for the first time</p>
+						<p id="demo" style="font-size: 30x;"></p>
+						<hr width="200px" style="height:30px !important">
+						<p>Bismillah, semoga kita ketemu, aamiin</p>
 						<p><strong>on Aug 13, 2022 &mdash; Bandung, Indonesia</strong></p>
 					</div>
 				</div>
@@ -86,20 +86,50 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
 						<img src="images/f.jpeg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-						<h3>Louie Jie L. Mahusay</h3>
+						<h3>Annisa Nurul Hidayah</h3>
 					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center"><img src="images/flaticon/svg/003-luxury.svg" class="svg img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com"></h2></div>
+					<div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center">&hearts;</h2></div>
 					<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
 						<img src="images/r.jpeg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-						<h3>Marializa R. Tabay</h3>
+						<h3>Riko Raynol Hasan</h3>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<marquee behavior="" direction="">
+		<p>	&hearts;	&hearts;   horeeeeeee, We are gonna meet for the first time  	&hearts;	&hearts;<p></marquee>
 
-
-	
+			<script>
+				// Mengatur waktu akhir perhitungan mundur
+				var countDownDate = new Date("Aug 13, 2022 12:00:00").getTime();
+				
+				// Memperbarui hitungan mundur setiap 1 detik
+				var x = setInterval(function() {
+				
+					// Untuk mendapatkan tanggal dan waktu hari ini
+					var now = new Date().getTime();
+						
+					// Temukan jarak antara sekarang dan tanggal hitung mundur
+					var distance = countDownDate - now;
+						
+					// Perhitungan waktu untuk hari, jam, menit dan detik
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+						
+					// Keluarkan hasil dalam elemen dengan id = "demo"
+					document.getElementById("demo").innerHTML = days + "d   " + hours + "h   "
+					+ minutes + "m   " + seconds + "s   ";
+						
+					// Jika hitungan mundur selesai, tulis beberapa teks 
+					if (distance < 0) {
+						clearInterval(x);
+						document.getElementById("demo").innerHTML = "EXPIRED";
+					}
+				}, 1000);
+				</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -122,36 +152,7 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
-	<script>
-		// Mengatur waktu akhir perhitungan mundur
-		var countDownDate = new Date("Aug 13, 2022 12:00:00").getTime();
-		
-		// Memperbarui hitungan mundur setiap 1 detik
-		var x = setInterval(function() {
-		
-			// Untuk mendapatkan tanggal dan waktu hari ini
-			var now = new Date().getTime();
-				
-			// Temukan jarak antara sekarang dan tanggal hitung mundur
-			var distance = countDownDate - now;
-				
-			// Perhitungan waktu untuk hari, jam, menit dan detik
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-				
-			// Keluarkan hasil dalam elemen dengan id = "demo"
-			document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-			+ minutes + "m " + seconds + "s ";
-				
-			// Jika hitungan mundur selesai, tulis beberapa teks 
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("demo").innerHTML = "EXPIRED";
-			}
-		}, 1000);
-		</script>
+	
 
 	</body>
 </html>
